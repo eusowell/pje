@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 import urllib.request
 import zipfile
 from pathlib import Path
+import json
+from more_itertools import locate
 
 
 
@@ -19,13 +21,24 @@ folha = configur.get('installation', 'folha')
 path = configur.get('installation', 'dir_read')
 pje = configur.get('installation', 'pje')
 
-path_complete = os.path.abspath(path)
-xlsx = pd.ExcelFile(path_complete)
-PROCESSOS = []
-df = pd.read_excel(xlsx, folha)
+doc = configur.get('documento', 'docs')
 
-for d in range(len(df)):
-    PROCESSOS.append(df.loc[d, 'PROCESSOS'])
+if doc == 'sim':
+    DOCUMENTOS = []
+    path_doc = configur.get('documento', 'dir_read_doc')
+    path_complete_doc = os.path.abspath(path_doc)
+    xlsx_doc = pd.ExcelFile(path_complete_doc)
+    df_doc = pd.read_excel(xlsx_doc, folha)
+    for d in range(len(df_doc)):
+        DOCUMENTOS.append(df_doc.loc[d, 'DOCUMENTOS'])
+else:
+    PROCESSOS = []
+    path_complete = os.path.abspath(path)
+    xlsx = pd.ExcelFile(path_complete)
+    df = pd.read_excel(xlsx, folha)
+    for d in range(len(df)):
+        PROCESSOS.append(df.loc[d, 'PROCESSOS'])
+
 
 USERNAME = configur.get('login', 'username')
 PASSWORD = configur.get('login', 'password')
@@ -75,6 +88,90 @@ def handle_page(tab, n_processo):
     sleep(1)
     new_tab.close()
 
+def pesquisa_doc(page, tipo_doc, doc):
+    print(f'Numero do doc: {doc}')
+    page.check(f'xpath={tipo_doc}')
+    assert page.is_checked(f'xpath={tipo_doc}')
+    page.wait_for_selector('#fPP\:dpDec\:documentoParte')
+    sleep(1)
+    page.fill('#fPP\:dpDec\:documentoParte', doc)
+    page.click('xpath=//*[@id="fPP:searchProcessos"]')
+    # //*[@id="fPP:processosGridPanel"]
+    sleep(2)
+    page.wait_for_selector(
+            'xpath=//*[@id="fPP:processosTable:tb"]',
+            timeout=100*600
+            )
+    html = page.inner_html('xpath=//*[@id="fPP:processosGridPanel"]')
+    soup = BeautifulSoup(html, 'html.parser')
+    destino = f'RESULTADO\\{doc}\\'
+    if not os.path.exists(destino):
+        os.makedirs(destino)
+    
+    table = soup.find('table')
+
+    headers = [header.text for header in table.find_all('th')]
+    results = [{headers[i]: cell.text.replace('\n', '').strip() for i, cell in enumerate(row.find_all('td'))}
+            for row in table.find_all('tr', attrs={"class": "rich-table-row"} )]
+
+    results = list(filter(None, results))
+
+    jsonStr = json.dumps(results, ensure_ascii=False)
+    # print(jsonStr)
+
+    with open(f"{destino}/data.json", 'w') as outfile:
+        json.dump(results, outfile, ensure_ascii=False,  indent=4)
+
+    """
+    gdp_table = soup.find("table")
+    headers = [header.text for header in table.find_all('th')]
+    gdp_table_data = gdp_table.find_all("th")
+
+    # Get all the headings of Lists
+    headings = []
+    for td in gdp_table_data:
+        # remove any newlines and extra spaces from left and right
+        headings.append(td.text.replace('\n', ' ').strip())
+    
+    table_data = []
+    for tr in gdp_table.find_all("tr", attrs={"class": "rich-table-row"}): # find all tr's from table's tbody
+        t_row = {}
+        # Each table row is stored in the form of
+        # find all td's(3) in tr and zip it with t_header
+        for td in tr.find_all("td"): 
+            t_row = td.text.replace('\n', '').strip()
+            table_data.append(t_row)
+
+    data = []
+
+    for c, t in enumerate(table_data):
+        # print(f'texto: {t}, e posição {c}')
+        if '' == t:
+            p = c-1
+            c = c
+            o = c+1
+            d = c+2
+            cs = c+3
+            pa = c+4
+            pp = c+5
+            u = c+6
+
+            data.append(f'{headings[0]}: {table_data[p]},'
+            f'{headings[1]}: {table_data[c]},'
+            f'{headings[2]}: {table_data[o]},'
+            f'{headings[3]}: {table_data[d]},'
+            f'{headings[4]}: {table_data[cs]},'
+            f'{headings[5]}: {table_data[pa]},'
+            f'{headings[6]}: {table_data[pp]},'
+            f'{headings[7]}: {table_data[u]}'
+            )
+    with open(f"{destino}/data.json", 'w') as outfile:
+          json.dump(data, outfile, ensure_ascii=False)
+
+    arquivo = open(f'{destino}/pesquisa_doc.txt', 'w')
+    arquivo.writelines(data)
+    arquivo.close()"""
+
 
 def pesquisa(page, proc, html_doc):
     if type(proc) == str:
@@ -112,7 +209,7 @@ def pesquisa(page, proc, html_doc):
 
 def run(playwright):
     chromium = playwright.chromium  # or "firefox" or "webkit".
-    browser = p.chromium.launch()
+    browser = p.chromium.launch(headless=False)
     page = browser.new_page()
     # stealth_sync(page)
     page.goto(pje)
@@ -156,23 +253,44 @@ def run(playwright):
     arquivo.writelines(html)
     arquivo.close()
 
-    for processo in PROCESSOS:
-        print(f'Processo pesquisado: {processo}')
-        try:
-            pesquisa(page, processo, html)
-        except TimeoutError:
-            destino = f'RESULTADO\\{processo}\\'
-            if not os.path.exists(destino):
-                os.makedirs(destino)
-            erro = f'Erro pesquisa de processo: {processo}'
-            print(f'Erro Apresentado: {erro}')
-            arquivo = open(f'{destino}/erro.txt', 'w')
-            arquivo.writelines(erro)
-            arquivo.close()
+    if doc == 'sim':
+        for d in DOCUMENTOS:
+            if type(d) == str:
+                d = d
+            else:
+                d = str(d)
+            size_doc = len(d)
+            print(f'Tamanho do numero: {size_doc}')
+            if size_doc <= 11:
+                d = d.zfill(11)                
+                ck = '//*[@id="cpf"]'
+                pesquisa_doc(page, ck, d)
+            else:
+                d = d.zfill(14) 
+                ck = '//*[@id="cnpj"]'
+                pesquisa_doc(page, ck, d)
+            page.reload()
+            sleep(2)
+            page.wait_for_load_state()
+    else:
 
-        page.reload()
-        sleep(2)
-        page.wait_for_load_state()
+        for processo in PROCESSOS:
+            print(f'Processo pesquisado: {processo}')
+            try:
+                pesquisa(page, processo, html)
+            except TimeoutError:
+                destino = f'RESULTADO\\{processo}\\'
+                if not os.path.exists(destino):
+                    os.makedirs(destino)
+                erro = f'Erro pesquisa de processo: {processo}'
+                print(f'Erro Apresentado: {erro}')
+                arquivo = open(f'{destino}/erro.txt', 'w')
+                arquivo.writelines(erro)
+                arquivo.close()
+
+            page.reload()
+            sleep(2)
+            page.wait_for_load_state()
 
     browser.close()
 

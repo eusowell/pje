@@ -1,0 +1,275 @@
+<div class="row" align="left">
+                        <div>
+			<table class="grid_resultado" cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_CorpoAba_grdArquivos" style="border-collapse:collapse;">
+				<tbody><tr class="linhaEscura">
+					<th class="linhaEscura" scope="col">Visualizar</th><th class="linhaEscura" scope="col">Tipo Documento</th><th class="linhaEscura" scope="col">Valor</th><th class="linhaEscura" scope="col">Incluido por:</th><th class="linhaEscura" scope="col">Data da Inclusão</th><th class="linhaEscura" scope="col">Dia/Prazo</th><th class="linhaEscura" scope="col">Limite de Inclusão</th><th class="linhaEscura" scope="col">Bloqueado por:</th><th class="linhaEscura" scope="col">Fluxo</th><th class="linhaEscura" scope="col">Excluir</th>
+				</tr><tr class="d1e9d269-0582-4552-8f81-4cae32b661fc">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl02$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_0" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','d1e9d269-0582-4552-8f81-4cae32b661fc','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl02$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_0" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl02$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_0" value="d1e9d269-0582-4552-8f81-4cae32b661fc">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_0">Inicial</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_0">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_0">SARA LISLLEY OLIVEIRA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_0">01/04/2019 15:32:59</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_0">8 / FORA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_0" horizontalalign="Center">23/11/2011</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_0">CAROLINA BEATRIZ DE OLIVEIRA INOCENCIO CAVALCANTE</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_0">Validação de Sinistrio</span>
+                                    </td><td class="linhaClara" align="center">
+                                        
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl02$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_0" value="True">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl02$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_0">
+                                    </td>
+				</tr><tr class="e32fc053-31b4-4a44-ba2c-d3be23e2941c">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl03$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_1" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','e32fc053-31b4-4a44-ba2c-d3be23e2941c','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl03$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_1" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl03$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_1" value="e32fc053-31b4-4a44-ba2c-d3be23e2941c">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_1">Citação</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_1">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_1">SARA LISLLEY OLIVEIRA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_1">01/04/2019 15:33:11</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_1">3 / FORA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_1" horizontalalign="Center">16/11/2011</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_1">CAROLINA BEATRIZ DE OLIVEIRA INOCENCIO CAVALCANTE</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_1">Validação de Sinistrio</span>
+                                    </td><td class="linhaClara" align="center">
+                                        
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl03$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_1" value="True">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl03$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_1">
+                                    </td>
+				</tr><tr class="dc2e7a2a-4e27-4b2c-8a13-6a803fb9bd61">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl04$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_2" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','dc2e7a2a-4e27-4b2c-8a13-6a803fb9bd61','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl04$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_2" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl04$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_2" value="dc2e7a2a-4e27-4b2c-8a13-6a803fb9bd61">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_2">Boletim de Ocorrência</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_2">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_2">SARA LISLLEY OLIVEIRA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_2">01/04/2019 15:33:24</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_2"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_2" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_2">CAROLINA BEATRIZ DE OLIVEIRA INOCENCIO CAVALCANTE</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_2">Validação de Sinistrio</span>
+                                    </td><td class="linhaClara" align="center">
+                                        
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl04$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_2" value="True">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl04$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_2">
+                                    </td>
+				</tr><tr class="ac48e30d-0229-48c8-9d7c-cecb792c3cbb">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl05$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_3" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','ac48e30d-0229-48c8-9d7c-cecb792c3cbb','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl05$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_3" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl05$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_3" value="ac48e30d-0229-48c8-9d7c-cecb792c3cbb">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_3">Contestação</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_3">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_3">ALISON ALVES LIMA DE SOUZA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_3">01/10/2019 13:49:07</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_3"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_3" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_3"></span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_3"> - </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl05$btnExcluir" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnExcluir_3" src="../../App_Themes/img/IconExcluir.gif">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl05$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_3">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl05$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_3">
+                                    </td>
+				</tr><tr class="e8e6507a-4626-4355-a463-94b3f613ef3d">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl06$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_4" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','e8e6507a-4626-4355-a463-94b3f613ef3d','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl06$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_4" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl06$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_4" value="e8e6507a-4626-4355-a463-94b3f613ef3d">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_4">Ata de Audiência</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_4">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_4">ALISON ALVES LIMA DE SOUZA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_4">01/10/2019 13:49:19</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_4"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_4" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_4"></span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_4"> - </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl06$btnExcluir" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnExcluir_4" src="../../App_Themes/img/IconExcluir.gif">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl06$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_4">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl06$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_4">
+                                    </td>
+				</tr><tr class="9714b751-dc37-49e4-8f79-33c0d299b02d">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl07$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_5" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','9714b751-dc37-49e4-8f79-33c0d299b02d','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl07$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_5" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl07$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_5" value="9714b751-dc37-49e4-8f79-33c0d299b02d">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_5">Sentença</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_5">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_5">ALISON ALVES LIMA DE SOUZA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_5">01/10/2019 13:49:31</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_5"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_5" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_5"></span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_5"> - </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl07$btnExcluir" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnExcluir_5" src="../../App_Themes/img/IconExcluir.gif">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl07$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_5">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl07$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_5">
+                                    </td>
+				</tr><tr class="3caf1259-c7b1-49d6-8538-055dc74d4347">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl08$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_6" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','3caf1259-c7b1-49d6-8538-055dc74d4347','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl08$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_6" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl08$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_6" value="3caf1259-c7b1-49d6-8538-055dc74d4347">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_6">Recurso Apelação</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_6">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_6">ALISON ALVES LIMA DE SOUZA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_6">01/10/2019 13:49:46</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_6"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_6" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_6"></span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_6"> - </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl08$btnExcluir" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnExcluir_6" src="../../App_Themes/img/IconExcluir.gif">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl08$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_6">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl08$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_6">
+                                    </td>
+				</tr><tr class="646fb66c-355d-4759-bd21-cd2d3858b6df">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl09$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_7" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','646fb66c-355d-4759-bd21-cd2d3858b6df','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl09$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_7" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl09$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_7" value="646fb66c-355d-4759-bd21-cd2d3858b6df">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_7">Contrarrazões - Apelação</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_7">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_7">ALISON ALVES LIMA DE SOUZA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_7">01/10/2019 13:50:05</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_7"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_7" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_7"></span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_7"> - </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl09$btnExcluir" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnExcluir_7" src="../../App_Themes/img/IconExcluir.gif">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl09$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_7">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl09$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_7">
+                                    </td>
+				</tr><tr class="0d1e0c19-c2b2-4a53-8bc2-997f310a428e">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl10$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_8" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','0d1e0c19-c2b2-4a53-8bc2-997f310a428e','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl10$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_8" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl10$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_8" value="0d1e0c19-c2b2-4a53-8bc2-997f310a428e">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_8">Protocolo - Contrarrazões - Recurso Apelação</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_8">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_8">ALISON ALVES LIMA DE SOUZA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_8">01/10/2019 13:50:54</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_8"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_8" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_8"></span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_8"> - </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl10$btnExcluir" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnExcluir_8" src="../../App_Themes/img/IconExcluir.gif">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl10$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_8">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl10$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_8">
+                                    </td>
+				</tr><tr class="93a0f197-7f21-408e-8170-d7e9fd79d026">
+					<td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl11$btnDetalhes" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnDetalhes_9" src="../../App_Themes/img/iconVisualizar.gif" onclick="AbrirAnexo('https://sisdpvatdocs.seguradoralider.com.br/api/file/','93a0f197-7f21-408e-8170-d7e9fd79d026','XOFPqqjZUDNC3ohdpOPTJ8gQbTTwD8NpP___VEw+g5xr___O9Pq8dxfGhsLJXVLf3___hE');">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl11$hfFlagArquivoNovo" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfFlagArquivoNovo_9" value="0">
+										<input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl11$hfArquivoApi" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfArquivoApi_9" value="93a0f197-7f21-408e-8170-d7e9fd79d026">
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblTpDocumento_9">Acórdão - Apelação</span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblValorCusta_9">0,00</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblIncluidopor_9">ALISON ALVES LIMA DE SOUZA</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDataInclusao_9">01/10/2019 13:51:21</span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblDiaPrazo_9"> / </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblLimiteInclusao_9" horizontalalign="Center"></span>
+                                    </td><td class="linhaClara" align="center">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblBloqueadopor_9"></span>
+                                    </td><td class="linhaClara">
+                                        <span id="ContentPlaceHolder1_CorpoAba_grdArquivos_lblFluxo_9"> - </span>
+                                    </td><td class="linhaClara" align="center">
+                                        <input type="image" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl11$btnExcluir" id="ContentPlaceHolder1_CorpoAba_grdArquivos_btnExcluir_9" src="../../App_Themes/img/IconExcluir.gif">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl11$hfUtilizadoValidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoValidacao_9">
+                                        <input type="hidden" name="ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos$ctl11$hfUtilizadoLiquidacao" id="ContentPlaceHolder1_CorpoAba_grdArquivos_hfUtilizadoLiquidacao_9">
+                                    </td>
+				</tr><tr class="linhaPaginacao" align="right">
+					<td colspan="10"><table>
+						<tbody><tr>
+							<td><input type="image" src="../../App_Themes/img/proximo.gif" alt=">" onclick="javascript:__doPostBack('ctl00$ctl00$ContentPlaceHolder1$CorpoAba$grdArquivos','Page$Next');return false;"></td>
+						</tr>
+					</tbody></table></td>
+				</tr>
+			</tbody></table>
+		</div>
+                    </div>

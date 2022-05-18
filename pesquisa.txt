@@ -1,0 +1,661 @@
+
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:j_id148:nomeParte">
+Nome da Parte</label>
+        </div>
+        
+        <div class="value col-sm-12 "><input id="fPP:j_id148:nomeParte" type="text" name="fPP:j_id148:nomeParte" alt="Nome da Parte" maxlength="100">
+        </div>
+    </div><div id="fPP:j_id157">
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:j_id157:nomeAdvogado">
+Nome do Representante</label>
+        </div>
+        
+        <div class="value col-sm-12 "><input id="fPP:j_id157:nomeAdvogado" type="text" name="fPP:j_id157:nomeAdvogado" maxlength="100">
+        </div>
+    </div></div>
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:dpDec:documentoParte">
+
+					CPF <input type="radio" id="cpf" name="tipoMascaraDocumento" checked="checked" onclick="mascaraDocumento()"> 
+					CNPJ <input type="radio" id="cnpj" name="tipoMascaraDocumento" onclick="mascaraDocumento()"></label>
+        </div>
+        
+        <div class="value col-sm-12 "><input id="fPP:dpDec:documentoParte" type="text" name="fPP:dpDec:documentoParte" onblur="apenasNumeros(this)">
+
+	<script type="text/javascript">
+	//<![CDATA[
+	(function($){
+		  $(document).ready(function() {
+			var selector = 'documentoParte';
+
+			//Seleciona elemento por id
+			var $input = $("input[id$='" + selector + "']");
+			
+			if($input.length < 1){
+				//Seleciona elemento por class
+				$input = $("input" + selector);
+			}
+			
+			if ('999.999.999-99' == '') {
+				$input.unmask();
+			} else {
+				$input.mask('999.999.999-99');
+			}
+		 });
+	})(jQuery_21);
+	//]]>
+	</script>
+        </div>
+    </div><div id="fPP:numProcessoDiv">
+	
+	<div class="form-group numero-processo">
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:numeroProcesso:numeroSequencial">
+Número do processo</label>
+        </div>
+        
+        <div class="value col-sm-12 "><input id="fPP:numeroProcesso:numeroSequencial" type="text" name="fPP:numeroProcesso:numeroSequencial" class="col-sm-3" maxlength="7" onkeyup="avancaFoco(0)"><input id="fPP:numeroProcesso:numeroDigitoVerificador" type="text" name="fPP:numeroProcesso:numeroDigitoVerificador" class="col-sm-2" maxlength="2" onkeyup="avancaFoco(1)"><input id="fPP:numeroProcesso:ano" type="text" name="fPP:numeroProcesso:ano" class="col-sm-2" maxlength="4" onkeyup="avancaFoco(2)"><input id="fPP:numeroProcesso:ramoJustica" type="text" name="fPP:numeroProcesso:ramoJustica" value="8" class="col-sm-1 text-center" maxlength="1"><input id="fPP:numeroProcesso:respectivoTribunal" type="text" name="fPP:numeroProcesso:respectivoTribunal" value="08" class="col-sm-2 text-center" maxlength="2" onkeyup="avancaFoco(3)"><input id="fPP:numeroProcesso:numeroOrgaoJustica" type="text" name="fPP:numeroProcesso:numeroOrgaoJustica" class="col-sm-2" maxlength="4" onkeyup="apenasNumeros(this)">
+        </div>
+    </div>
+	</div>
+
+	<script type="text/javascript">
+		function avancaFoco(atual) {
+			var ids = new Array();
+			ids[0] = "fPP:numeroProcesso:numeroSequencial";
+			ids[1] = "fPP:numeroProcesso:numeroDigitoVerificador";
+			ids[2] = "fPP:numeroProcesso:ano";
+			ids[3] = "fPP:numeroProcesso:respectivoTribunal";
+			ids[4] = "fPP:numeroProcesso:numeroOrgaoJustica";
+			i = atual;
+			apenasNumeros(document.getElementById(ids[i]));
+			if (document.getElementById(ids[i]).value.length == document.getElementById(ids[i]).maxLength) {
+				document.getElementById(ids[i + 1]).focus();
+			}
+		}
+	</script></div><div id="fPP:processoReferenciaFragment">
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia">
+Processo referência</label>
+        </div>
+        
+        <div class="value col-sm-12 "><table id="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia" class="radio">
+	<tbody><tr>
+<td>
+<input type="radio" checked="checked" name="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia" id="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia:0" value="true" onchange="A4J.AJAX.Submit('fPP',event,{'similarityGroupingId':'fPP:processoReferenciaDecoration:j_id198','parameters':{'fPP:processoReferenciaDecoration:j_id198':'fPP:processoReferenciaDecoration:j_id198'} } )"><label for="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia:0"> Numeração única</label></td>
+<td>
+<input type="radio" name="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia" id="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia:1" value="false" onchange="A4J.AJAX.Submit('fPP',event,{'similarityGroupingId':'fPP:processoReferenciaDecoration:j_id198','parameters':{'fPP:processoReferenciaDecoration:j_id198':'fPP:processoReferenciaDecoration:j_id198'} } )"><label for="fPP:processoReferenciaDecoration:habilitarMascaraProcessoReferencia:1"> Livre</label></td>
+	</tr>
+</tbody></table>
+
+    <div class="propertyView col-sm-12 "><div id="fPP:processoReferenciaDecoration:IdProcessoReferenciaComMascaraDecoration:fieldIdProcessoReferenciaComMascaraDiv" class="name"><label for="fPP:processoReferenciaDecoration:IdProcessoReferenciaComMascaraDecoration:IdProcessoReferenciaComMascara" class="">
+<span id="fPP:processoReferenciaDecoration:IdProcessoReferenciaComMascaraDecoration:j_id202" class="required">*</span></label></div>
+        <div class="value col-sm-12 ">
+
+	<script type="text/javascript">
+	//<![CDATA[
+	(function($){
+		  $(document).ready(function() {
+			var selector = 'IdProcessoReferenciaComMascara';
+
+			//Seleciona elemento por id
+			var $input = $("input[id$='" + selector + "']");
+			
+			if($input.length < 1){
+				//Seleciona elemento por class
+				$input = $("input" + selector);
+			}
+			
+			if ('9999999-99.9999.9.99.9999' == '') {
+				$input.unmask();
+			} else {
+				$input.mask('9999999-99.9999.9.99.9999');
+			}
+		 });
+	})(jQuery_21);
+	//]]>
+	</script><input id="fPP:processoReferenciaDecoration:IdProcessoReferenciaComMascaraDecoration:IdProcessoReferenciaComMascara" type="text" name="fPP:processoReferenciaDecoration:IdProcessoReferenciaComMascaraDecoration:IdProcessoReferenciaComMascara" class="" alt="#(alt)" maxlength="255" onblur="apenasNumeros(this);" onchange="" onkeypress="" onkeyup="" size="0" tabindex="">
+    </div>
+    </div>
+        </div>
+    </div></div>
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:j_id225:assunto">
+Assunto</label>
+        </div>
+        
+        <div class="value col-sm-12 "><input id="fPP:j_id225:assunto" type="text" name="fPP:j_id225:assunto" class="form-control" alt="Assunto" maxlength="100">
+        </div>
+    </div>
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:j_id234:classeJudicial">
+Classe judicial</label>
+        </div>
+        
+        <div class="value col-sm-12 "><input id="fPP:j_id234:classeJudicial" type="text" name="fPP:j_id234:classeJudicial" class="form-control" alt="Classe judicial" maxlength="100">
+        </div>
+    </div>
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:j_id243:numeroDocumento">
+Número do documento</label>
+        </div>
+        
+        <div class="value col-sm-12 "><input id="fPP:j_id243:numeroDocumento" type="text" name="fPP:j_id243:numeroDocumento" class="form-control" alt="Número do documento" maxlength="100">
+        </div>
+    </div><div id="fPP:decorationDados">
+
+    <div class="propertyView col-sm-12 "><div id="fPP:decorationDados:fieldDiv" class="name"><label for="fPP:decorationDados:numeroOAB" class="">
+OAB (000000 A UF)<span id="fPP:decorationDados:j_id255" class="required">*</span></label></div>
+        <div class="value col-sm-12 "><input id="fPP:decorationDados:numeroOAB" type="text" name="fPP:decorationDados:numeroOAB" class="col-sm-4" alt="Número OAB" maxlength="10"><span class="pull-left"> - </span><input id="fPP:decorationDados:letraOAB" type="text" name="fPP:decorationDados:letraOAB" class="col-sm-2 text-upper" maxlength="1" onkeyup="apenasTextos(this)"><span class="pull-left"> - </span><select id="fPP:decorationDados:ufOABCombo" name="fPP:decorationDados:ufOABCombo" class="col-sm-2" size="1">	<option value="org.jboss.seam.ui.NoSelectionConverter.noSelectionValue" selected="selected">UF</option>
+	<option value="0">AC</option>
+	<option value="1">AL</option>
+	<option value="2">AP</option>
+	<option value="3">AM</option>
+	<option value="4">BA</option>
+	<option value="5">CE</option>
+	<option value="6">DF</option>
+	<option value="7">ES</option>
+	<option value="8">GO</option>
+	<option value="9">MA</option>
+	<option value="10">MT</option>
+	<option value="11">MS</option>
+	<option value="12">MG</option>
+	<option value="13">PR</option>
+	<option value="14">PB</option>
+	<option value="15">PA</option>
+	<option value="16">PE</option>
+	<option value="17">PI</option>
+	<option value="18">RJ</option>
+	<option value="19">RN</option>
+	<option value="20">RS</option>
+	<option value="21">RO</option>
+	<option value="22">RR</option>
+	<option value="23">SC</option>
+	<option value="24">SE</option>
+	<option value="25">SP</option>
+	<option value="26">TO</option>
+</select>
+    </div>
+    </div></div>
+
+    <div class="propertyView col-sm-12 "><div id="fPP:jurisdicaoComboDecoration:fieldjurisdicaoComboDiv" class="name"><label for="fPP:jurisdicaoComboDecoration:jurisdicaoCombo" class="">
+
+			Jurisdição<span id="fPP:jurisdicaoComboDecoration:j_id314" class="required">*</span></label></div>
+        <div class="value col-sm-12 "><select id="fPP:jurisdicaoComboDecoration:jurisdicaoCombo" name="fPP:jurisdicaoComboDecoration:jurisdicaoCombo" class="" size="1" onchange="A4J.AJAX.Submit('fPP',event,{'similarityGroupingId':'fPP:jurisdicaoComboDecoration:j_id321','control':this,'parameters':{'fPP:jurisdicaoComboDecoration:j_id321':'fPP:jurisdicaoComboDecoration:j_id321','ajaxSingle':'fPP:jurisdicaoComboDecoration:jurisdicaoCombo'} } )" onclick="" tabindex="">	<option value="org.jboss.seam.ui.NoSelectionConverter.noSelectionValue" selected="selected">Selecione</option>
+	<option value="27">Afonso Cláudio</option>
+	<option value="28">Agua Doce do Norte</option>
+	<option value="29">Aguia Branca</option>
+	<option value="30">Alegre</option>
+	<option value="31">Alfredo Chaves</option>
+	<option value="32">Alto Rio Novo</option>
+	<option value="33">Anchieta</option>
+	<option value="34">Apiacá</option>
+	<option value="35">Aracruz</option>
+	<option value="36">Atílio Vivácqua</option>
+	<option value="37">Baixo Guandu</option>
+	<option value="38">Barra de São Francisco</option>
+	<option value="39">Boa Esperança</option>
+	<option value="40">Bom Jesus do Norte</option>
+	<option value="41">Cachoeiro de Itapemirim</option>
+	<option value="42">Cariacica</option>
+	<option value="43">Castelo</option>
+	<option value="44">Colatina</option>
+	<option value="45">Conceição da Barra</option>
+	<option value="46">Conceição do Castelo</option>
+	<option value="47">Domingos Martins</option>
+	<option value="48">Dores do Rio Preto</option>
+	<option value="49">Ecoporanga</option>
+	<option value="50">Fundão</option>
+	<option value="51">Guarapari</option>
+	<option value="52">Guaçuí</option>
+	<option value="53">Ibatiba</option>
+	<option value="54">Ibiraçu</option>
+	<option value="55">Ibitirama</option>
+	<option value="56">Iconha</option>
+	<option value="57">Itaguaçu</option>
+	<option value="58">Itapemirim</option>
+	<option value="59">Itarana</option>
+	<option value="60">Iúna</option>
+	<option value="61">Jaguaré</option>
+	<option value="62">Jerônimo Monteiro</option>
+	<option value="63">João Neiva</option>
+	<option value="64">Laranja da Terra</option>
+	<option value="65">Linhares</option>
+	<option value="66">Mantenópolis</option>
+	<option value="67">Marataízes</option>
+	<option value="68">Marechal Floriano</option>
+	<option value="69">Marilândia</option>
+	<option value="70">Mimoso do Sul</option>
+	<option value="71">Montanha</option>
+	<option value="72">Mucurici</option>
+	<option value="73">Muniz Freire</option>
+	<option value="74">Muqui</option>
+	<option value="75">Nova Venécia</option>
+	<option value="76">Pancas</option>
+	<option value="77">Pedro Canário</option>
+	<option value="78">Pinheiros</option>
+	<option value="79">Piúma</option>
+	<option value="80">Presidente Kennedy</option>
+	<option value="81">Rio Bananal</option>
+	<option value="82">Rio Novo do Sul</option>
+	<option value="83">Santa Leopoldina</option>
+	<option value="84">Santa Maria de Jetibá</option>
+	<option value="85">Santa Teresa</option>
+	<option value="86">Serra</option>
+	<option value="87">São Domingos do Norte</option>
+	<option value="88">São Gabriel da Palha</option>
+	<option value="89">São José do Calçado</option>
+	<option value="90">São Mateus</option>
+	<option value="91">Vargem Alta</option>
+	<option value="92">Venda Nova do Imigrante</option>
+	<option value="93">Viana</option>
+	<option value="94">Vila Velha</option>
+	<option value="95">Vitória</option>
+</select>
+    </div>
+    </div><div id="fPP:comboOrgaoJulgadorDiv">
+
+    <div class="propertyView col-sm-12 "><div id="fPP:orgaoJulgadorComboDecoration:fieldorgaoJulgadorComboDiv" class="name"><label for="fPP:orgaoJulgadorComboDecoration:orgaoJulgadorCombo" class="">
+
+			Órgão Julgador<span id="fPP:orgaoJulgadorComboDecoration:j_id327" class="required">*</span></label></div>
+        <div class="value col-sm-12 "><select id="fPP:orgaoJulgadorComboDecoration:orgaoJulgadorCombo" name="fPP:orgaoJulgadorComboDecoration:orgaoJulgadorCombo" class="" size="1" onchange="" onclick="" tabindex="">	<option value="org.jboss.seam.ui.NoSelectionConverter.noSelectionValue" selected="selected">Selecione</option>
+	<option value="96">1ª Contadoria de Vitória</option>
+	<option value="97">2ª Contadoria de Vitória</option>
+	<option value="98">Afonso Cláudio - 1ª Vara</option>
+	<option value="99">Alegre - 1ª Vara</option>
+	<option value="100">Alfredo Chaves - Vara Única</option>
+	<option value="101">Alto Rio Novo - Vara Única</option>
+	<option value="102">Anchieta - 1ª Vara</option>
+	<option value="103">Apiacá - Vara Única</option>
+	<option value="104">Aracruz - 1ª Vara Cível, Família e de Órfãos e Sucessões</option>
+	<option value="105">Aracruz - 1º Juizado Especial Cível, Criminal e da Fazenda Pública</option>
+	<option value="106">Aracruz - 2ª Vara Cível, Família e de Órfãos e Sucessões</option>
+	<option value="107">Aracruz - 2º Juizado Especial Cível, Criminal e da Fazenda Pública</option>
+	<option value="108">Aracruz - Vara da Fazenda Pública Estadual e Municipal, Registro Público e Meio Ambiente</option>
+	<option value="109">Aracruz - Vara da Infância e Juventude</option>
+	<option value="110">Atílio Vivacqua - Vara Única</option>
+	<option value="111">Baixo Guandu - 1ª Vara</option>
+	<option value="112">Barra de São Francisco - 1ª Vara Cível</option>
+	<option value="113">Barra de São Francisco - 3ª Vara</option>
+	<option value="114">Barra de São Francisco - Juizado Especial Cível, Criminal e FP</option>
+	<option value="115">Boa Esperança - Vara Única</option>
+	<option value="116">Bom Jesus do Norte - Vara Única</option>
+	<option value="117">Cachoeiro de Itapemirim - 1ª Vara Cível</option>
+	<option value="118">Cachoeiro de Itapemirim - 1ª Vara da Fazenda Pública Estadual, Municipal, RP, MA e Execuções Fiscais</option>
+	<option value="119">Cachoeiro de Itapemirim - 1ª Vara da Infância e Juventude</option>
+	<option value="120">Cachoeiro de Itapemirim - 1ª Vara de Família e Órfãos e Sucessões</option>
+	<option value="121">Cachoeiro de Itapemirim - 1º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="122">Cachoeiro de Itapemirim - 1º Juizado Especial Cível</option>
+	<option value="123">Cachoeiro de Itapemirim - 2ª Vara Cível</option>
+	<option value="124">Cachoeiro de Itapemirim - 2ª Vara da Fazenda Pública Estadual, Municipal, RP, MA e Execuções Fiscais</option>
+	<option value="125">Cachoeiro de Itapemirim - 2ª Vara de Família e Órfãos e Sucessões</option>
+	<option value="126">Cachoeiro de Itapemirim - 2º Juizado Especial Cível</option>
+	<option value="127">Cachoeiro de Itapemirim - 3ª Vara Cível</option>
+	<option value="128">Cachoeiro de Itapemirim - 3ª Vara de Família e Órfãos e Sucessões</option>
+	<option value="129">Cachoeiro de Itapemirim - 4ª Vara Cível</option>
+	<option value="130">Cachoeiro de Itapemirim - 5ª Vara Cível</option>
+	<option value="131">Cariacica - Comarca da Capital - 1ª Vara Cível, Órfãos e Sucessões</option>
+	<option value="132">Cariacica - Comarca da Capital - 1ª Vara da Infância e Juventude</option>
+	<option value="133">Cariacica - Comarca da Capital - 1ª Vara de Família</option>
+	<option value="134">Cariacica - Comarca da Capital - 1º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="135">Cariacica - Comarca da Capital - 1º Juizado Especial Cível</option>
+	<option value="136">Cariacica - Comarca da Capital - 2ª Vara Cível, Órfãos e Sucessões</option>
+	<option value="137">Cariacica - Comarca da Capital - 2ª Vara de Família</option>
+	<option value="138">Cariacica - Comarca da Capital - 2º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="139">Cariacica - Comarca da Capital - 2º Juizado Especial Cível</option>
+	<option value="140">Cariacica - Comarca da Capital - 3ª Vara Cível, Órfãos e Sucessões</option>
+	<option value="141">Cariacica - Comarca da Capital - 3ª Vara de Família</option>
+	<option value="142">Cariacica - Comarca da Capital - 3º Juizado Especial Cível</option>
+	<option value="143">Cariacica - Comarca da Capital - 4ª Vara Cível, Órfãos e Sucessões</option>
+	<option value="144">Cariacica - Comarca da Capital - 4ª Vara de Família</option>
+	<option value="145">Cariacica - Comarca da Capital - 4º Juizado Especial Cível</option>
+	<option value="146">Cariacica - Comarca da Capital - Vara da Fazenda Pública Estadual, Registro Público e Meio Ambiente</option>
+	<option value="147">Cariacica - Comarca da Capital - Vara da Fazenda Pública Municipal</option>
+	<option value="148">Castelo - 1ª Vara</option>
+	<option value="149">Colatina - 1ª Vara Cível</option>
+	<option value="150">Colatina - 1ª Vara de Família, Órfãos e Sucessões</option>
+	<option value="151">Colatina - 1º Juizado Especial Cível</option>
+	<option value="152">Colatina - 2ª Vara Cível</option>
+	<option value="153">Colatina - 2ª Vara de Família, Órfãos e Sucessões</option>
+	<option value="154">Colatina - 2º Juizado Especial Cível</option>
+	<option value="155">Colatina - 3ª Vara de Família, Órfãos e Sucessões</option>
+	<option value="156">Colatina - 3º Juizado Especial Cível</option>
+	<option value="157">Colatina - Juizado Especial Criminal e Juizado Especial da Fazenda Pública</option>
+	<option value="158">Colatina - Vara da Infância e Juventude</option>
+	<option value="159">Conceição da Barra - 1ª Vara</option>
+	<option value="160">Conceição do Castelo - Vara Única</option>
+	<option value="161">Contadoria de Afonso Cláudio</option>
+	<option value="162">Contadoria de Alegre</option>
+	<option value="163">Contadoria de Alfredo Chaves</option>
+	<option value="164">Contadoria de Alto Rio Novo</option>
+	<option value="165">Contadoria de Anchieta</option>
+	<option value="166">Contadoria de Apiacá</option>
+	<option value="167">Contadoria de Aracruz</option>
+	<option value="168">Contadoria de Atílio Vivacqua</option>
+	<option value="169">Contadoria de Baixo Guandu</option>
+	<option value="170">Contadoria de Barra de São Francisco</option>
+	<option value="171">Contadoria de Boa Esperança</option>
+	<option value="172">Contadoria de Bom Jesus do Norte</option>
+	<option value="173">Contadoria de Cachoeiro de Itapemirim</option>
+	<option value="174">Contadoria de Cariacica</option>
+	<option value="175">Contadoria de Castelo</option>
+	<option value="176">Contadoria de Colatina</option>
+	<option value="177">Contadoria de Conceição da Barra</option>
+	<option value="178">Contadoria de Conceição do Castelo</option>
+	<option value="179">Contadoria de Domingos Martins</option>
+	<option value="180">Contadoria de Dores do Rio Preto</option>
+	<option value="181">Contadoria de Ecoporanga</option>
+	<option value="182">Contadoria de Fundão</option>
+	<option value="183">Contadoria de Guarapari</option>
+	<option value="184">Contadoria de Guaçuí</option>
+	<option value="185">Contadoria de Ibatiba</option>
+	<option value="186">Contadoria de Ibiraçu</option>
+	<option value="187">Contadoria de Ibitirama</option>
+	<option value="188">Contadoria de Iconha</option>
+	<option value="189">Contadoria de Itaguaçu</option>
+	<option value="190">Contadoria de Itapemirim</option>
+	<option value="191">Contadoria de Itarana</option>
+	<option value="192">Contadoria de Iúna</option>
+	<option value="193">Contadoria de Jaguaré</option>
+	<option value="194">Contadoria de Jerônimo Monteiro</option>
+	<option value="195">Contadoria de João Neiva</option>
+	<option value="196">Contadoria de Laranja da Terra</option>
+	<option value="197">Contadoria de Linhares</option>
+	<option value="198">Contadoria de Mantenópolis</option>
+	<option value="199">Contadoria de Marataízes</option>
+	<option value="200">Contadoria de Marechal Floriano</option>
+	<option value="201">Contadoria de Marilândia</option>
+	<option value="202">Contadoria de Mimoso do Sul</option>
+	<option value="203">Contadoria de Montanha</option>
+	<option value="204">Contadoria de Mucurici</option>
+	<option value="205">Contadoria de Muniz Freire</option>
+	<option value="206">Contadoria de Muqui</option>
+	<option value="207">Contadoria de Nova Venécia</option>
+	<option value="208">Contadoria de Pancas</option>
+	<option value="209">Contadoria de Pedro Canário</option>
+	<option value="210">Contadoria de Pinheiros</option>
+	<option value="211">Contadoria de Piúma</option>
+	<option value="212">Contadoria de Presidente Kennedy</option>
+	<option value="213">Contadoria de Rio Bananal</option>
+	<option value="214">Contadoria de Rio Novo do Sul</option>
+	<option value="215">Contadoria de Santa Leopoldina</option>
+	<option value="216">Contadoria de Santa Maria de Jetibá</option>
+	<option value="217">Contadoria de Santa Teresa</option>
+	<option value="218">Contadoria de Serra</option>
+	<option value="219">Contadoria de São Domingos do Norte</option>
+	<option value="220">Contadoria de São Gabriel da Palha</option>
+	<option value="221">Contadoria de São José do Calçado</option>
+	<option value="222">Contadoria de São Mateus</option>
+	<option value="223">Contadoria de Vargem Alta</option>
+	<option value="224">Contadoria de Venda Nova do Imigrante</option>
+	<option value="225">Contadoria de Viana</option>
+	<option value="226">Contadoria de Vila Velha</option>
+	<option value="227">Contadoria de Água Doce do Norte</option>
+	<option value="228">Contadoria de Águia Branca</option>
+	<option value="229">Domingos Martins - 1ª Vara</option>
+	<option value="230">Dores do Rio Preto - Vara Única</option>
+	<option value="231">Ecoporanga - Vara Única</option>
+	<option value="232">Fundão - Comarca da Capital - Vara Única</option>
+	<option value="233">Guarapari - Comarca da Capital - 1ª Vara Cível</option>
+	<option value="234">Guarapari - Comarca da Capital - 1ª Vara de Família e Órfãos e Sucessões</option>
+	<option value="235">Guarapari - Comarca da Capital - 1º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="236">Guarapari - Comarca da Capital - 1º Juizado Especial Cível</option>
+	<option value="237">Guarapari - Comarca da Capital - 2ª Vara Cível</option>
+	<option value="238">Guarapari - Comarca da Capital - 2ª Vara de Família e Órfãos e Sucessões</option>
+	<option value="239">Guarapari - Comarca da Capital - 2º Juizado Especial Cível</option>
+	<option value="240">Guarapari - Comarca da Capital - 3ª Vara Cível</option>
+	<option value="241">Guarapari - Comarca da Capital - Vara da Fazenda Pública Municipal e Estadual, Registro Público e Meio Ambiente</option>
+	<option value="242">Guarapari - Comarca da Capital - Vara da Infância e Juventude</option>
+	<option value="243">Guaçuí - 1ª Vara</option>
+	<option value="244">Ibatiba - Vara Única</option>
+	<option value="245">Ibiraçu - 1ª Vara</option>
+	<option value="246">Ibitirama - Vara Única</option>
+	<option value="247">Iconha - Vara Única</option>
+	<option value="248">Itaguaçu - Vara Única</option>
+	<option value="249">Itapemirim - 1ª Vara Cível</option>
+	<option value="250">Itapemirim - Juizado Especial Cível, Criminal e Fazenda Pública</option>
+	<option value="251">Itapemirim - Vara de Família, Órfãos e Sucessões</option>
+	<option value="252">Itarana - Vara Única</option>
+	<option value="253">Iúna - 1ª Vara</option>
+	<option value="254">Jaguaré - Vara Única</option>
+	<option value="255">Jerônimo Monteiro - Vara Única</option>
+	<option value="256">João Neiva - Vara Única</option>
+	<option value="257">Laranja da Terra - Vara Única</option>
+	<option value="258">Linhares - 1ª Vara Cível e Comercial</option>
+	<option value="259">Linhares - 1ª Vara da Infância e Juventude</option>
+	<option value="260">Linhares - 1ª Vara de Família, Órfãos e Sucessões</option>
+	<option value="261">Linhares - 1º Juizado Especial Cível</option>
+	<option value="262">Linhares - 2ª Vara Cível e Comercial</option>
+	<option value="263">Linhares - 2ª Vara de Família, Órfãos e Sucessões</option>
+	<option value="264">Linhares - 2º Juizado Especial Cível</option>
+	<option value="265">Linhares - Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="266">Linhares - Vara da Fazenda Pública Municipal e Estadual, Registro Público e Meio Ambiente</option>
+	<option value="267">Mantenópolis - Vara Única</option>
+	<option value="268">Marataízes - Juizado Especial Cível, Criminal e Fazenda Pública</option>
+	<option value="269">Marataízes - Vara Cível</option>
+	<option value="270">Marataízes - Vara da Fazenda Pública Estadual e Municipal, Registro Público e Meio Ambiente</option>
+	<option value="271">Marataízes - Vara de Família, Órfãos e Sucessões, Infância e Juventude</option>
+	<option value="272">Marechal Floriano - Vara Única</option>
+	<option value="273">Marilândia - Vara Única</option>
+	<option value="274">Mimoso do Sul - 1ª Vara</option>
+	<option value="275">Montanha - Vara Única</option>
+	<option value="276">Mucurici - Vara Única</option>
+	<option value="277">Muniz Freire - Vara Única</option>
+	<option value="278">Muqui - Vara Única</option>
+	<option value="279">Nova Venécia - 1º Vara Cível</option>
+	<option value="280">Nova Venécia - 2ª Vara Cível</option>
+	<option value="281">Nova Venécia - Juizado Especial Cível, Criminal e Fazenda Pública</option>
+	<option value="282">Nova Venécia - Vara de Família, Órfãos e Sucessões, Infância e Juventude</option>
+	<option value="283">Pancas - 1ª Vara</option>
+	<option value="284">Pedro Canário - Vara Única</option>
+	<option value="285">Pinheiros - Vara Única</option>
+	<option value="286">Piúma - 1ª Vara</option>
+	<option value="287">Presidente Kennedy - Vara Única</option>
+	<option value="288">Rio Bananal - Vara Única</option>
+	<option value="289">Rio Novo do Sul - Vara Única</option>
+	<option value="290">Santa Leopoldina - Vara Única</option>
+	<option value="291">Santa Maria de Jetibá - 1ª Vara</option>
+	<option value="292">Santa Teresa - Vara Única</option>
+	<option value="293">Serra - Comarca da Capital - 1ª Vara Cível</option>
+	<option value="294">Serra - Comarca da Capital - 1ª Vara da Infância e Juventude</option>
+	<option value="295">Serra - Comarca da Capital - 1ª Vara de Família</option>
+	<option value="296">Serra - Comarca da Capital - 1º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="297">Serra - Comarca da Capital - 1º Juizado Especial Cível</option>
+	<option value="298">Serra - Comarca da Capital - 2ª Vara Cível</option>
+	<option value="299">Serra - Comarca da Capital - 2ª Vara de Família</option>
+	<option value="300">Serra - Comarca da Capital - 2º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="301">Serra - Comarca da Capital - 2º Juizado Especial Cível</option>
+	<option value="302">Serra - Comarca da Capital - 3ª Vara Cível</option>
+	<option value="303">Serra - Comarca da Capital - 3ª Vara de Família</option>
+	<option value="304">Serra - Comarca da Capital - 3º Juizado Especial Cível</option>
+	<option value="305">Serra - Comarca da Capital - 4ª Vara Cível</option>
+	<option value="306">Serra - Comarca da Capital - 4ª Vara de Família</option>
+	<option value="307">Serra - Comarca da Capital - 4º Juizado Especial Cível</option>
+	<option value="308">Serra - Comarca da Capital - 5ª Vara Cível</option>
+	<option value="309">Serra - Comarca da Capital - 6ª Vara Cível</option>
+	<option value="310">Serra - Comarca da Capital - Vara da Fazenda Pública Estadual, Registro Público, Meio Ambiente</option>
+	<option value="311">Serra - Comarca da Capital - Vara da Fazenda Pública Municipal</option>
+	<option value="312">Serra - Comarca da Capital - Vara de Órfãos e Sucessões</option>
+	<option value="313">São Domingos do Norte - Vara Única</option>
+	<option value="314">São Gabriel da Palha - 1ª Vara</option>
+	<option value="315">São José do Calçado - Vara Única</option>
+	<option value="316">São Mateus - 1ª Vara Cível</option>
+	<option value="317">São Mateus - 1º Juizado Especial Cível, Criminal e da Fazenda Pública</option>
+	<option value="318">São Mateus - 2ª Vara Cível</option>
+	<option value="319">São Mateus - 2º Juizado Especial Cível, Criminal e da Fazenda Pública</option>
+	<option value="320">São Mateus - Vara da Infância e Juventude, Órfãos e Sucessões</option>
+	<option value="321">São Mateus - Vara de Família</option>
+	<option value="322">Vara da Fazenda Pública Estadual, Municipal, de Registros Públicos e Meio Ambiente de Colatina</option>
+	<option value="323">Vargem Alta - Vara Única</option>
+	<option value="324">Venda Nova do Imigrante - Vara Única</option>
+	<option value="325">Viana - Comarca da Capital - 1º Juizado Especial Cível</option>
+	<option value="326">Viana - Comarca da Capital - Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="327">Viana - Comarca da Capital - Vara Cível, Comercial, Fazenda Pública Municipal e Estadual, Registro Público e Meio Amb.</option>
+	<option value="328">Viana - Comarca da Capital - Vara da Infância e Juventude, Órfãos e Sucessões e Acidentes de Trabalho</option>
+	<option value="329">Viana - Comarca da Capital - Vara de Família</option>
+	<option value="330">Vila Velha - Comarca da Capital - 1ª Vara Cível</option>
+	<option value="331">Vila Velha - Comarca da Capital - 1ª Vara da Fazenda Pública Municipal</option>
+	<option value="332">Vila Velha - Comarca da Capital - 1ª Vara da Infância e Juventude</option>
+	<option value="333">Vila Velha - Comarca da Capital - 1ª Vara de Família</option>
+	<option value="334">Vila Velha - Comarca da Capital - 1ª Vara de Órfãos e Sucessões</option>
+	<option value="335">Vila Velha - Comarca da Capital - 1º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="336">Vila Velha - Comarca da Capital - 1º Juizado Especial Cível</option>
+	<option value="337">Vila Velha - Comarca da Capital - 2ª Vara Cível</option>
+	<option value="338">Vila Velha - Comarca da Capital - 2ª Vara da Fazenda Pública Municipal</option>
+	<option value="339">Vila Velha - Comarca da Capital - 2ª Vara de Família</option>
+	<option value="340">Vila Velha - Comarca da Capital - 2ª Vara de Órfãos e Sucessões</option>
+	<option value="341">Vila Velha - Comarca da Capital - 2º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="342">Vila Velha - Comarca da Capital - 2º Juizado Especial Cível</option>
+	<option value="343">Vila Velha - Comarca da Capital - 3ª Vara Cível</option>
+	<option value="344">Vila Velha - Comarca da Capital - 3ª Vara de Família</option>
+	<option value="345">Vila Velha - Comarca da Capital - 3º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="346">Vila Velha - Comarca da Capital - 4ª Vara Cível</option>
+	<option value="347">Vila Velha - Comarca da Capital - 4ª Vara de Família</option>
+	<option value="348">Vila Velha - Comarca da Capital - 4º Juizado Especial Cível</option>
+	<option value="349">Vila Velha - Comarca da Capital - 5ª Vara Cível</option>
+	<option value="350">Vila Velha - Comarca da Capital - 5º Juizado Especial Cível</option>
+	<option value="351">Vila Velha - Comarca da Capital - 6ª Vara Cível</option>
+	<option value="352">Vila Velha - Comarca da Capital - Vara da Fazenda Pública Estadual, Registros Públicos e Meio Ambiente</option>
+	<option value="353">Vitória - Comarca da Capital - 10ª Vara Cível</option>
+	<option value="354">Vitória - Comarca da Capital - 11ª Vara Cível</option>
+	<option value="355">Vitória - Comarca da Capital - 1ª Vara Cível</option>
+	<option value="356">Vitória - Comarca da Capital - 1ª Vara da Fazenda Pública Estadual e Municipal, Registros Públicos, Meio Ambiente e Saúde</option>
+	<option value="357">Vitória - Comarca da Capital - 1ª Vara da Fazenda Pública Estadual Privativa das Execuções Fiscais</option>
+	<option value="358">Vitória - Comarca da Capital - 1ª Vara da Fazenda Pública Privativa de Execuções Fiscais Municipais</option>
+	<option value="359">Vitória - Comarca da Capital - 1ª Vara da Infância e Juventude</option>
+	<option value="360">Vitória - Comarca da Capital - 1ª Vara de Família</option>
+	<option value="361">Vitória - Comarca da Capital - 1ª Vara de Órfãos e Sucessões</option>
+	<option value="362">Vitória - Comarca da Capital - 1º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="363">Vitória - Comarca da Capital - 1º Juizado Especial Cível</option>
+	<option value="364">Vitória - Comarca da Capital - 2ª Vara Cível</option>
+	<option value="365">Vitória - Comarca da Capital - 2ª Vara da Fazenda Pública Estadual e Municipal, Registros Públicos, Meio Ambiente e Saúde</option>
+	<option value="366">Vitória - Comarca da Capital - 2ª Vara da Fazenda Pública Estadual Privativa das Execuções Fiscais</option>
+	<option value="367">Vitória - Comarca da Capital - 2ª Vara da Fazenda Pública Privativa de Execuções Fiscais Municipais</option>
+	<option value="368">Vitória - Comarca da Capital - 2ª Vara de Família</option>
+	<option value="369">Vitória - Comarca da Capital - 2ª Vara de Órfãos e Sucessões</option>
+	<option value="370">Vitória - Comarca da Capital - 2º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="371">Vitória - Comarca da Capital - 2º Juizado Especial Cível</option>
+	<option value="372">Vitória - Comarca da Capital - 3ª Vara Cível</option>
+	<option value="373">Vitória - Comarca da Capital - 3ª Vara da Fazenda Pública Estadual e Municipal, Registros Públicos, Meio Ambiente e Saúde</option>
+	<option value="374">Vitória - Comarca da Capital - 3ª Vara de Família</option>
+	<option value="375">Vitória - Comarca da Capital - 3º Juizado Especial Criminal e Fazenda Pública</option>
+	<option value="376">Vitória - Comarca da Capital - 3º Juizado Especial Cível (Justiça Volante)</option>
+	<option value="377">Vitória - Comarca da Capital - 4ª Vara Cível</option>
+	<option value="378">Vitória - Comarca da Capital - 4ª Vara da Fazenda Pública Estadual e Municipal, Registros Públicos, Meio Ambiente e Saúde</option>
+	<option value="379">Vitória - Comarca da Capital - 4ª Vara de Família</option>
+	<option value="380">Vitória - Comarca da Capital - 4º Juizado Especial Cível</option>
+	<option value="381">Vitória - Comarca da Capital - 5ª Vara Cível</option>
+	<option value="382">Vitória - Comarca da Capital - 5ª Vara da Fazenda Pública Estadual e Municipal, Registros Públicos, Meio Ambiente e Saúde</option>
+	<option value="383">Vitória - Comarca da Capital - 5º Juizado Especial Cível</option>
+	<option value="384">Vitória - Comarca da Capital - 6ª Vara Cível</option>
+	<option value="385">Vitória - Comarca da Capital - 6º Juizado Especial Cível</option>
+	<option value="386">Vitória - Comarca da Capital - 7ª Vara Cível</option>
+	<option value="387">Vitória - Comarca da Capital - 7º Juizado Especial Cível (Justiça Telefonia)</option>
+	<option value="388">Vitória - Comarca da Capital - 8ª Vara Cível</option>
+	<option value="389">Vitória - Comarca da Capital - 8º Juizado Especial Cível</option>
+	<option value="390">Vitória - Comarca da Capital - 9ª Vara Cível</option>
+	<option value="391">Vitória - Comarca da Capital - 9º Juizado Especial Cível</option>
+	<option value="392">Vitória - Comarca da Capital - Vara de Auditoria Militar</option>
+	<option value="393">Vitória - Comarca da Capital - Vara de Recuperação Judicial e Falência</option>
+	<option value="394">Vitória - Comarca da Capital - Vara Especializada Acidentes de Trabalho</option>
+	<option value="395">Água Doce do Norte - Vara Única</option>
+	<option value="396">Águia Branca - Vara Única</option>
+</select>
+    </div>
+    </div></div><div id="fPP:dataAutuacaoDiv">
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:dataAutuacaoDecoration:dataAutuacaoInicio">
+Data de Autuação</label>
+        </div>
+        
+        <div class="value col-sm-12 ">
+
+	<script type="text/javascript">
+	//<![CDATA[
+	(function($){
+		  $(document).ready(function() {
+			var selector = '.maskDate';
+
+			//Seleciona elemento por id
+			var $input = $("input[id$='" + selector + "']");
+			
+			if($input.length < 1){
+				//Seleciona elemento por class
+				$input = $("input" + selector);
+			}
+			
+			if ('99/99/9999' == '') {
+				$input.unmask();
+			} else {
+				$input.mask('99/99/9999');
+			}
+		 });
+	})(jQuery_21);
+	//]]>
+	</script>
+		<div class="col-sm-6"><label for="fPP:dataAutuacaoDecoration:dataAutuacaoInicio" class="pull-left mt-10 mr-5">
+De </label><span id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioPopup"><input class="rich-calendar-input col-sm-8 text-center maskDate" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioInputDate" name="fPP:dataAutuacaoDecoration:dataAutuacaoInicioInputDate" style="vertical-align: middle; " type="text"><img alt="" class="rich-calendar-button mt-10" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioPopupButton" style="vertical-align: middle" src="/pje/stylesheet/estilos/richfaces/img/calendar-icon.png"><input autocomplete="off" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioInputCurrentDate" name="fPP:dataAutuacaoDecoration:dataAutuacaoInicioInputCurrentDate" style="display:none" type="hidden" value="05/2022"></span><div id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioIFrame" style="display: none;"></div><table id="fPP:dataAutuacaoDecoration:dataAutuacaoInicio" border="0" cellpadding="0" cellspacing="0" class="rich-calendar-exterior rich-calendar-popup undefined" style="display:none; position:absolute;z-index: 3;" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.skipEventOnCollapse=true;"><tbody><tr><td class="rich-calendar-header" colspan="7" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioHeader"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDay"><td class="rich-calendar-days rich-calendar-weekends" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDayCell0">Dom</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDayCell1">Seg</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDayCell2">Ter</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDayCell3">Qua</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDayCell4">Qui</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDayCell5">Sex</td><td class="rich-calendar-days rich-calendar-weekends rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekDayCell6">Sáb</td></tr>
+<tr id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekNum1"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell0" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell1" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell2" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell3" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell4" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell5" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell6" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekNum2"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell7" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell8" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell9" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell10" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell11" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell12" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell13" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekNum3"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell14" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell15" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell16" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell17" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell18" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell19" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell20" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekNum4"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell21" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell22" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell23" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell24" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell25" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell26" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell27" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekNum5"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell28" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell29" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell30" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell31" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell32" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell33" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell34" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioWeekNum6"><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell35" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell36" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell37" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell38" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell39" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell40" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioDayCell41" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoInicio').component.eventCellOnMouseOut(event, this);"></td></tr><tr><td class="rich-calendar-footer" colspan="7" id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioFooter"></td></tr></tbody></table><div id="fPP:dataAutuacaoDecoration:dataAutuacaoInicioScript" style="display: none;"><script type="text/javascript">Richfaces.Calendar.addLocale('pt_BR', {'weekDayLabels':['Domingo','Segunda\x2Dfeira','Terça\x2Dfeira','Quarta\x2Dfeira','Quinta\x2Dfeira','Sexta\x2Dfeira','Sábado'] ,'weekDayLabelsShort':['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'] ,'monthLabels':['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'] ,'monthLabelsShort':['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'] ,'minDaysInFirstWeek':1,'firstWeekDay':0} );
+new Calendar('fPP:dataAutuacaoDecoration:dataAutuacaoInicio', 
+			"pt_BR",{'datePattern':'dd/MM/yyyy','enableManualInput':true,'currentDate':new Date(2022,4,18),'showWeeksBar':false,'direction':'auto','labels':{'cancel':'Cancelar','apply':'Aplicar','today':'Hoje','clean':'Limpar','ok':'OK','close':'Fechar'} } ,{} ).load();</script></div>
+		</div>
+           	
+		<div class="col-sm-6"><label for="fPP:dataAutuacaoDecoration:dataAutuacaoFim" class="pull-left mt-10 mr-5">
+ Até </label><span id="fPP:dataAutuacaoDecoration:dataAutuacaoFimPopup"><input class="rich-calendar-input col-sm-8 text-center maskDate" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimInputDate" name="fPP:dataAutuacaoDecoration:dataAutuacaoFimInputDate" style="vertical-align: middle; " type="text"><img alt="" class="rich-calendar-button mt-10" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimPopupButton" style="vertical-align: middle" src="/pje/stylesheet/estilos/richfaces/img/calendar-icon.png"><input autocomplete="off" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimInputCurrentDate" name="fPP:dataAutuacaoDecoration:dataAutuacaoFimInputCurrentDate" style="display:none" type="hidden" value="05/2022"></span><div id="fPP:dataAutuacaoDecoration:dataAutuacaoFimIFrame" style="display: none;"></div><table id="fPP:dataAutuacaoDecoration:dataAutuacaoFim" border="0" cellpadding="0" cellspacing="0" class="rich-calendar-exterior rich-calendar-popup undefined" style="display:none; position:absolute;z-index: 3;" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.skipEventOnCollapse=true;"><tbody><tr><td class="rich-calendar-header" colspan="7" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimHeader"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDay"><td class="rich-calendar-days rich-calendar-weekends" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDayCell0">Dom</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDayCell1">Seg</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDayCell2">Ter</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDayCell3">Qua</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDayCell4">Qui</td><td class="rich-calendar-days" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDayCell5">Sex</td><td class="rich-calendar-days rich-calendar-weekends rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekDayCell6">Sáb</td></tr>
+<tr id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekNum1"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell0" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell1" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell2" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell3" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell4" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell5" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell6" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekNum2"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell7" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell8" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell9" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell10" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell11" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell12" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell13" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekNum3"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell14" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell15" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell16" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell17" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell18" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell19" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell20" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekNum4"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell21" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell22" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell23" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell24" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell25" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell26" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell27" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekNum5"><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell28" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell29" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell30" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell31" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell32" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell33" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell34" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td></tr><tr id="fPP:dataAutuacaoDecoration:dataAutuacaoFimWeekNum6"><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell rich-calendar-holly" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell35" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell36" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell37" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell38" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell39" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell40" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td><td class="rich-bottom-cell rich-calendar-cell-size rich-calendar-cell rich-calendar-holly rich-right-cell" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimDayCell41" onclick="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnClick(event, this);" onmouseover="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOver(event, this);" onmouseout="$('fPP:dataAutuacaoDecoration:dataAutuacaoFim').component.eventCellOnMouseOut(event, this);"></td></tr><tr><td class="rich-calendar-footer" colspan="7" id="fPP:dataAutuacaoDecoration:dataAutuacaoFimFooter"></td></tr></tbody></table><div id="fPP:dataAutuacaoDecoration:dataAutuacaoFimScript" style="display: none;"><script type="text/javascript">new Calendar('fPP:dataAutuacaoDecoration:dataAutuacaoFim', 
+			"pt_BR",{'datePattern':'dd/MM/yyyy','enableManualInput':true,'currentDate':new Date(2022,4,18),'showWeeksBar':false,'direction':'auto','labels':{'cancel':'Cancelar','apply':'Aplicar','today':'Hoje','clean':'Limpar','ok':'OK','close':'Fechar'} } ,{} ).load();</script></div>
+		</div>
+        </div>
+    </div></div>
+	
+    <div class="propertyView ">
+        <div class="name"><label for="fPP:valorDaCausaDecoration:valorCausaInicial">
+Valor da Causa</label>
+        </div>
+        
+        <div class="value col-sm-12 ">
+		<div class="col-sm-6"><label for="fPP:valorDaCausaDecoration:valorCausaInicial" class="pull-left mr-5 mt-10">
+De </label><input id="fPP:valorDaCausaDecoration:valorCausaInicial" type="text" name="fPP:valorDaCausaDecoration:valorCausaInicial" class="col-sm-9 text-center" maxlength="26" onblur="validarFaixaMonetaria('fPP:valorDaCausaDecoration:valorCausaInicial', 'fPP:valorDaCausaDecoration:valorCausaFinal');">	
+		</div>
+			 							
+		<div class="col-sm-6"><label for="fPP:valorDaCausaDecoration:valorCausaFinal" class="pull-left mr-5 mt-10">
+ Até </label><input id="fPP:valorDaCausaDecoration:valorCausaFinal" type="text" name="fPP:valorDaCausaDecoration:valorCausaFinal" class="col-sm-9 text-center" maxlength="26" onblur="validarFaixaMonetaria('fPP:valorDaCausaDecoration:valorCausaInicial', 'fPP:valorDaCausaDecoration:valorCausaFinal');">	
+		</div><div id="fPP:valorDaCausaDecoration:carregarMascaraMonetaria"><script type="text/javascript">//<![CDATA[
+ {
+	var selector = "#fPP\\:valorDaCausaDecoration\\:valorCausaFinal";
+	try {
+		selector = eval("#fPP\\:valorDaCausaDecoration\\:valorCausaFinal");
+	} catch (e) {}
+	jQuery(selector).maskMoney();
+}
+//]]></script><script type="text/javascript">//<![CDATA[
+ {
+	var selector = "#fPP\\:valorDaCausaDecoration\\:valorCausaInicial";
+	try {
+		selector = eval("#fPP\\:valorDaCausaDecoration\\:valorCausaInicial");
+	} catch (e) {}
+	jQuery(selector).maskMoney();
+}
+//]]></script></div>
+        </div>
+    </div><div id="fPP:movimentacaoProcessualSuggestDiv">
+
+    <div class="propertyView col-sm-12 "><div id="fPP:j_id390:fieldmovimentacaoProcessualSuggestDiv" class="name"><label for="fPP:j_id390:movimentacaoProcessualSuggest" class="">
+Movimento processual<span id="fPP:j_id390:j_id394" class="required">*</span></label></div>
+        <div class="value col-sm-12 "><input id="fPP:j_id390:movimentacaoProcessualSuggest" type="text" name="fPP:j_id390:movimentacaoProcessualSuggest" value="" class="suggest" maxlength="50" onblur="" onchange="if(this.value != '') return false;;A4J.AJAX.Submit('fPP',event,{'similarityGroupingId':'fPP:j_id390:j_id400','control':this,'eventsQueue':'org.richfaces.queue.global','parameters':{'ajaxSingle':'fPP:j_id390:movimentacaoProcessualSuggest','fPP:j_id390:j_id400':'fPP:j_id390:j_id400'} ,'status':'_viewRoot:status'} )" onkeyup="" title="Auto-completar" autocomplete="off"><div id="fPP:j_id390:j_id401" class="rich-sb-common-container  " style="display:none; z-index: 201;width:250px;height:200px;;;"><div class="rich-sb-ext-decor-1"><div class="rich-sb-ext-decor-2" style=";; border-width: null  null  null  null ;"><table border="0" cellpadding="0" cellspacing="1" class="rich-sb-ext-decor-3"><tbody><tr><td><div class="_suggestion_size_ rich-sb-overflow" style="width:246px;height:196px;"><table width="100%" id="fPP:j_id390:j_id401:suggest" border="0"><tbody><tr style="display:none;"><td></td></tr></tbody></table></div></td></tr></tbody></table></div></div><div class="rich-sb-shadow" style="opacity:0.1; filter:alpha(opacity=10);top: 4px; left: 4px; "></div></div><div id="fPP:j_id390:j_id401_script" style="display:none;"><script type="text/javascript">Richfaces.onAvailable('fPP:j_id390:movimentacaoProcessualSuggest', function() { new RichFaces.Suggestion('fPP','fPP:j_id390:movimentacaoProcessualSuggest','fPP:j_id390:j_id401',{'similarityGroupingId':'fPP:j_id390:j_id401','onselect':function(suggestion,event){A4J.AJAX.Submit('fPP',event,{'similarityGroupingId':'fPP:j_id390:j_id401:j_id404','eventsQueue':'org.richfaces.queue.global','oncomplete':function(request,event,data){},'parameters':{'ajaxSingle':'fPP:j_id390:j_id401','fPP:j_id390:j_id401:j_id404':'fPP:j_id390:j_id401:j_id404'} ,'status':'_viewRoot:status'} )},'implicitEventsQueue':'fPP:j_id390:j_id401','width':'250','eventsQueue':'org.richfaces.queue.global','oncomplete':function(request,event,data){},'parameters':{'ajaxSingle':'fPP:j_id390:j_id401','fPP:j_id390:j_id401':'fPP:j_id390:j_id401'} ,'status':'_viewRoot:status','frequency':1.0,'minChars':'1'} );
+});</script></div><iframe src="/pje/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/images/spacer.gif.seam" id="fPP:j_id390:j_id401_iframe" style="position:absolute;display:none;z-index:200;"></iframe><input type="hidden" autocomplete="off" id="fPP:j_id390:j_id401_selection" name="fPP:j_id390:j_id401_selection">
+    </div>
+    </div></div><div id="fPP:j_id407" class="actionButtons col-sm-12"><script id="fPP:j_id408" type="text/javascript">//<![CDATA[
+		executarPesquisaReCaptcha=function(){A4J.AJAX.Submit('fPP',null,{'similarityGroupingId':'fPP:j_id408','oncomplete':function(request,event,data){hideLoading(); grecaptcha.reset();},'parameters':{'fPP:j_id408':'fPP:j_id408'} } )};
+		//]]></script><script language="JavaScript" type="text/javascript">document.forms['fPP'].onkeypress = new Function("event", "{var keycode;if (window.event) keycode = window.event.keyCode;else if (event) keycode = event.which;else return true;if (keycode == 13) { document.getElementById('fPP:searchProcessos').click();return false; } else return true; }");</script><input class="btn btn-primary pull-left" id="fPP:searchProcessos" name="fPP:searchProcessos" onclick="return executarReCaptcha();;A4J.AJAX.Submit('fPP',event,{'similarityGroupingId':'fPP:searchProcessos','parameters':{'fPP:searchProcessos':'fPP:searchProcessos'} } );return false;" value="Pesquisar" type="button"><input class="btn btn-default pull-left" id="fPP:clearButtonProcessos" name="fPP:clearButtonProcessos" onclick="A4J.AJAX.Submit('fPP',event,{'similarityGroupingId':'fPP:clearButtonProcessos','oncomplete':function(request,event,data){hideLoading();mascaraDocumento();},'parameters':{'fPP:clearButtonProcessos':'fPP:clearButtonProcessos'} } );return false;" value="Limpar" type="button"></div>
